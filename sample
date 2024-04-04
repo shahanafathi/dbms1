@@ -1,0 +1,6 @@
+create database fruits;
+use fruits;
+create table frd(frd_id int,frd_name varchar(40),frd_price int);
+insert into frd value(1,'mango',90),(2,'apple',30),(3,'grapes',80),(4,'dates',50),(5,'water melon',19);
+select *from frd;
+select frd_id from frd;
