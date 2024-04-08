@@ -1,0 +1,12 @@
+create database sample;
+use sample;
+
+create table students(student_id int primary key,student_name varchar(50),student_course varchar (50));
+insert into students value(1,'Neza','maths'),(2,'Ram','maths'),(3,'Raj','computer'),(4,'seetha','malayalam'),(5,'jaza','science');
+select *from students;
+select student_name from students where student_course='maths';
+select distinct student_course as course from students;
+select distinct student_course from students;
+SELECT student_id
+FROM students
+ORDER BY student_name DESC;
