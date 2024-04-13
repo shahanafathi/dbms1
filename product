@@ -1,0 +1,12 @@
+CREATE TABLE Productses (ProductID INTEGER PRIMARY KEY,ProductName TEXT,Category TEXT,Price DECIMAL,StockQuantity INTEGER);
+INSERT INTO  Productses VALUES (1, 'Laptop', 'Electronics', 800.00, 10),(2, 'Headphones', 'Electronics', 70.00, 20),(3, 'Coffee Mug', 'Kitchen', 15.00, 50),(4, 'Smartphone', 'Electronics', 600.00, 5),(5, 'Lamp', 'Home Decor', 25.00, 30);
+SELECT * FROM Productses;
+SELECT * FROM Productses WHERE Price > 50;
+SELECT * FROM Productses WHERE Category = 'Electronics';
+SELECT * FROM Productses WHERE Price BETWEEN 10 AND 30;
+
+SELECT * FROM Productses WHERE Price NOT BETWEEN 30 AND 50;
+SELECT * FROM Productses WHERE ProductName LIKE '%Mug%';
+SELECT DISTINCT Category FROM Productses;
+SELECT * FROM Productses WHERE StockQuantity > 0 AND Price <= 25 ORDER BY Price ASC;
+SELECT * FROM Productses WHERE ProductName LIKE 'L%';
