@@ -1,0 +1,26 @@
+create database employes;
+use employes;
+
+Create table Employes( emp_id int primary key, emp_name varchar(20), emp_salary decimal(30,2), emp_department varchar(20));
+
+insert into Employes values(1,'deechu',80000,'BA'),(2,'Riya',800,'BCA'),(3,'shaaz',70000,'BCA'),(4,'ammu',10000,'BBA'),(5,'Achu',40000,'BCOM'),(6,'jacob',40000,'BBA');
+
+select * from Employes;
+
+ALTER TABLE Employes add emypage int;
+
+update Employes set emypage=30 where empi_id=1;
+
+delete from Employes where empi_id=2;
+
+alter table Employes rename to  staff;
+select *from staff where empi_salary>60000 and empi_department='BA';
+update staff set emypage=25 where empi_id=4;
+select *from staff where emypage between 25 and 30;
+
+select * from staff where empi_department='BA' OR empi_department='BCA';
+select count(empi_id) from staff;
+
+select max(empi_salary) as empsalary,min(empi_salary) from staff;
+select sum(empi_salary) as empsalary,avg(empi_salary) from staff;
+select * from staff where empi_name like 'j%';
