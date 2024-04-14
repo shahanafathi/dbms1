@@ -1,0 +1,16 @@
+create database customer;
+use customer;
+CREATE TABLE customer (customer_id INT PRIMARY KEY, customer_name VARCHAR(20),  country VARCHAR(20), city VARCHAR(20), postcode VARCHAR(20));
+INSERT INTO customer (customer_id, customer_name, country, city, postcode) 
+VALUES(1, 'ranv', 'india', 'delhi', '8954'),(2, 'akhil', 'indonesia', 'taiwan', '851234'), (3, 'tina', 'pakistan', 'lahore', '905874'), (4, 'jose', 'gemany', 'berlin', '7536'),(5, 'rithu', 'mexico', 'tain', '9512');
+SELECT * FROM customer;
+SELECT * FROM customer WHERE customer_id = 1;
+SELECT DISTINCT country FROM customer;
+SELECT * FROM customer ORDER BY country DESC;
+SELECT * FROM customer ORDER BY postcode DESC;
+SELECT * FROM customer ORDER BY customer_name;
+SELECT * FROM customer ORDER BY country, customer_name;
+SELECT * FROM customer ORDER BY country ASC,customer_name DESC;
+SELECT * FROM customer WHERE country = 'gemany' AND city = 'berlin' AND postcode > '120';
+SELECT * FROM customer WHERE country IN ('Germany', 'Mexico');
+SELECT * FROM customer WHERE country != 'Mexico';
